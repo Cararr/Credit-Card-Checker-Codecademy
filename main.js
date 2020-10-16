@@ -92,3 +92,17 @@ const idInvalidCardCompanies = (arrOfWrongs) => {
 };
 
 idInvalidCardCompanies(findInvalidCards(batch));
+
+// string to array
+const strToArr = (str) => {
+	const arr = [];
+	for (let i = 0; i < str.length; i++) {
+		arr[i] = str[i];
+	}
+	const returnArrar = arr.filter((element) => {
+		return element !== ' ';
+	});
+	return returnArrar;
+};
+
+console.log(strToArr('1 23  12344555 6356'));
