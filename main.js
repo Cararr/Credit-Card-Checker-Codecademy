@@ -39,7 +39,7 @@ const batch = [
 ];
 
 // Add your functions below:
-3, 7, 1, 6, 1, 2, 0, 1, 9, 9, 8, 5, 2, 3, 6;
+/* VALIDATE FUNCTION */
 const validateCred = (arr) => {
 	let temporary = [...arr];
 	for (let i = temporary.length - 2; i >= 0; i -= 2) {
@@ -51,9 +51,9 @@ const validateCred = (arr) => {
 			return previous + current;
 		}) % 10;
 	return verdict;
-	//console.log('numer jest ' + (verdict ? 'ZŁY' : 'DOBRY'));
 };
-
+/* FUNCTION THAT MAKES AN ARRAY OF INVALID ARRAYS
+ */
 const findInvalidCards = (arrOfArr) => {
 	let wrongs = [];
 	for (let i = 0; i < arrOfArr.length; i++) {
@@ -61,7 +61,7 @@ const findInvalidCards = (arrOfArr) => {
 	}
 	return wrongs;
 };
-
+/* FUNCTION THAT MAKE AN ARRAY OF CREDIT CARD COMPANIES THAT SENT INVALID CARDS */
 const idInvalidCardCompanies = (arrOfWrongs) => {
 	let arrOfCompanies = [];
 	for (let i = 0; i < arrOfWrongs.length; i++) {
@@ -93,7 +93,7 @@ const idInvalidCardCompanies = (arrOfWrongs) => {
 
 idInvalidCardCompanies(findInvalidCards(batch));
 
-// string to array
+/* CARD NUMBER IN STRING TO AN ARRAY - BONUS TASK */
 const strToArr = (str) => {
 	const arr = [];
 	for (let i = 0; i < str.length; i++) {
@@ -105,4 +105,4 @@ const strToArr = (str) => {
 	return returnArrar;
 };
 
-console.log(strToArr('1 23  12344555 6356'));
+console.log(strToArr('1231 2344 5555 6356'));
