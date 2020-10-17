@@ -97,12 +97,8 @@ idInvalidCardCompanies(findInvalidCards(batch));
 const strToArr = (str) => {
 	const arr = [];
 	for (let i = 0; i < str.length; i++) {
-		arr[i] = str[i];
+		str[i] !== ' ' ? arr.push(parseInt(str[i], 10)) : null;
 	}
-	const returnArrar = arr.filter((element) => {
-		return element !== ' ';
-	});
-	return returnArrar;
+	return arr;
 };
-
-console.log(strToArr('1231 2344 5555 6356'));
+console.log(validateCred(strToArr('5535 7667 6875 1439')));
